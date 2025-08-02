@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover unparalleled comfort and exceptional service at 
+    Marvelous Place Hotel in Port Harcourt. Perfect for business and leisure, we offer luxurious 
+    rooms, modern amenities, and a central location for exploring Rivers State. Book your memorable stay today!">
+    <meta name="keywords" content="hotel Port Harcourt, hotels Rivers State, accommodation Port Harcourt, 
+    luxury hotel Port Harcourt, boutique hotel Port Harcourt, best hotel Port Harcourt, business hotel 
+    Port Harcourt, leisure hotel Port Harcourt, Port Harcourt lodging, hotel Nigeria, Marvelous Place hotel">
+    <meta name="author" content="Marvelous Place Hotel">
+    <title>Marvelous Place Hotel — Your Premier Stay in Port Harcourt, Nigeria</title>
+    <link rel="stylesheet" href="./hotel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav>
+    <div class="navbar-container">
+        <div class="logo-area">
+            <a href="./index.html" class="hotel-logo-link">
+                <img src="./Images/download.png" alt="Marvelous Place Hotel Logo" class="hotel-logo-image">
+            </a>
+        </div>
+
+        <div class="main-nav-area">
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./booking.html">Booking</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-area">
+            <a href="./contact.html" class="contact-link">Contact Us</a>
+        </div>
+    </div>
+</nav>
+</header>
+
+<div>
+    <section>
+       
+
+        <div class="form-container">
+        <div class="form-header">
+            <h1>Book Your Dream Stay</h1>
+            <p>Welcome to Marvelous Place Hotel</p>
+        </div>
+
+        <form action="action_page.php" method="post" autocomplete="on" class="booking-form">
+
+            <h2>Guest Details</h2>
+            <div class="input-group-row">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                </div>
+            </div>
+
+            <div class="input-group-row">
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., +2348012345678">
+                </div>
+            </div>
+
+            <h2>Reservation Details</h2>
+            <div class="input-group-row">
+                <div class="form-group">
+                    <label for="checkInDate">Check-in Date:</label>
+                    <input type="date" id="checkInDate" name="checkInDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkOutDate">Check-out Date:</label>
+                    <input type="date" id="checkOutDate" name="checkOutDate" required>
+                </div>
+            </div>
+
+            <div class="form-group"> <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="">Select a Room Type</option>
+                    <option value="standard" data-price="100">Standard Room ($100/night)</option>
+                    <option value="deluxe" data-price="150">Deluxe Room ($150/night)</option>
+                    <option value="executive" data-price="250">Executive Suite ($250/night)</option>
+                    <option value="presidential" data-price="500">Presidential Suite ($500/night)</option>
+                </select>
+            </div>
+
+            <div class="input-group-row-triple">
+                <div class="form-group">
+                    <label for="numRooms">Number of Rooms:</label>
+                    <input type="number" id="numRooms" name="numRooms" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="numAdults">Number of Adults:</label>
+                    <input type="number" id="numAdults" name="numAdults" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="numChildren">Number of Children:</label>
+                    <input type="number" id="numChildren" name="numChildren" min="0" value="0">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="specialRequests">Special Requests:</label>
+                <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests or notes?"></textarea>
+            </div>
+
+            <div class="form-total" id="estimatedTotal">
+                Estimated Total: <span class="price-display">$0.00</span> per night
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn primary-btn">Book Now</button>
+                <button type="reset" class="btn secondary-btn">Clear Form</button>
+            </div>
+        </form>
+        </div>
+    </section>
+</div>
+
+
+<footer class="main-footer">  <div class="footer-container">
+        <div class="footer-logo">
+            <img src="./Images/download.png" alt="Marvelous Place Hotel Logo" class="footer-logo-image">
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./booking.html">Booking</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <p>Phone:+234 9034682769</p>
+            <p>Email:jockielh@gmail.com</p>
+        </div>
+    </div>
+</footer>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Marvelous Place Hotel. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,1704 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Default font for the page, with fallbacks */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Light background color for the page */
+    color: #333; /* Default text color */
+    font-size: 100%; /* Base font size */
+    line-height: 1.6; /* Improves readability for body text */
+}
+
+/* Responsive Typography for Headings and Paragraphs */
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem); /* Larger, more impactful title */
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Section headings */
+}
+
+h3 {
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem); /* Card headings */
+}
+
+p {
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem); /* Body paragraphs */
+}
+
+/* ===================================== */
+/* Navigation Bar Layout                 */
+/* Logo (Left) - Main Nav (Center) - Contact (Right) */
+/* ===================================== */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    flex-wrap: wrap;
+}
+
+/* Logo Styling */
+.hotel-logo-link {
+    display: block;
+}
+
+.hotel-logo-image {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+/* Main Navigation Links Styling */
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+
+
+/* Contact Link Styling (Button Appearance) */
+    background-color: #ffd700;
+    color: #333;
+    border-radius: 5px;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.contact-link:hover {
+    background-color: #e6c200; /* Darker yellow on hover */
+    color: #1a1a1a; /* Slightly darker text on hover */
+}
+
+/* ===================================== */
+/* First Section (Hero Area)             */
+/* ===================================== */
+.first-section {
+    background-image: url('Images/pic\ 9.jpg'); /* Background image for the hero section */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100px; /* Minimum height for visual impact */
+    padding: 100px 20px; /* More vertical padding to push content down from top */
+    color: white; /* Text color over background image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow to text for readability */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Horizontally centers children */
+    justify-content: center; /* Vertically centers children (if extra space) */
+    text-align: center; /* Ensures text inside also centers */
+}
+
+.hero-title {
+    margin-bottom: 10px; /* Space between title and subtitle */
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    margin-bottom: 40px; /* Space between subtitle and booking button */
+    line-height: 1.3;
+}
+
+/* ===================================== */
+/* Booking Link (The button itself)      */
+/* ===================================== */
+.booking-area {
+    /* This div wraps the button. Flexbox on parent centers the button. */
+    display: flex; /* Makes the button area a flex container */
+    justify-content: center; /* Centers the button horizontally */
+    margin-top: 10pt;  /*Space above the button */
+}
+
+.booking-link {
+    background-color: #A08040; /* Muted Gold/Bronze - More refined than bright yellow */
+    color: #F8F8F8; /* Off-white/light-grey for elegant contrast */
+    border: 1px solid #C0A060; /* Subtle border for definition */
+    border-radius: 4px; /* Slightly less rounded than 5px, can feel more classic */
+    padding: 10px 25px; /* More generous padding for a substantial feel */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif; /* Elegant heading font */
+    font-weight: 400; /* Regular weight for a classic look */
+    font-size: 1.05rem; /* Slightly larger for prominence */
+    letter-spacing: 0.05em; /* A bit of letter spacing adds sophistication */
+    text-transform: uppercase; /* All caps for a formal touch */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft, subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    margin:auto; /* Centers the button horizontally */
+}
+
+.booking-link:hover {
+    background-color: #C0A060; /* Lighter gold/bronze on hover */
+    color: #FFF; /* Pure white on hover for sparkle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly more prominent shadow on hover */
+    transform: translateY(-2px); /* Lifts the button slightly */
+    border-color: #F0D090; /* Brighter border on hover */
+}
+
+.booking-link:active {
+    background-color: #806030; /* Darker on click */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Smaller shadow on click */
+    transform: translateY(0); /* Sinks back down */
+}
+
+/* ===================================== */
+/* About Section (History, Vision, Philosophy) */
+/* ===================================== */
+.about-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #F8F8F8;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Individual Section Cards */
+.history-section,
+.vision-section,
+.philosophy-section {
+    flex: 1; /* Allows each section to grow and shrink equally to fill the space */
+    padding: 30px; /* Padding inside each individual section box */
+    border: 1px solid #eee; /* Subtle border for definition */
+    border-radius: 5px;
+    background-color: white; /* White background for each card */
+    text-align: center; /* Center content within each section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Lighter shadow for individual cards */
+    display: flex; /* Make each section a flex container for its own content */
+    flex-direction: column; /* Stack its content vertically */
+    align-items: center; /* Center content horizontally within the section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for the Sections */
+.history-section:hover,
+.vision-section:hover,
+.philosophy-section:hover {
+    transform: translateY(-5px); /* Lifts the card slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Increases shadow for more depth */
+    cursor: pointer; /* Indicates it's interactive, even if not directly clickable */
+}
+
+/* Styling for the icons within these sections */
+.history-section .material-symbols-outlined,
+.vision-section .material-symbols-outlined,
+.philosophy-section .material-symbols-outlined { /* Only Material Symbols are used here */
+    font-size: 3em; /* Larger icon size */
+    color: #A08040; /* Muted gold color for the icons */
+    margin-bottom: 15px; /* Space below the icon */
+    line-height: 1; /* Ensure line-height doesn't add extra space */
+    transition: color 0.3s ease; /* Optional: Transition icon color on hover */
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; /* Material Symbols specific settings */
+}
+
+/* Optional: Icon color change on parent section hover */
+.history-section:hover .material-symbols-outlined,
+.vision-section:hover .material-symbols-outlined,
+.philosophy-section:hover .material-symbols-outlined {
+    color: #C0A060; /* Slightly brighter gold on hover */
+}
+
+/* Styling for the headings within these sections */
+.history-section h2,
+.vision-section h2,
+.philosophy-section h2 {
+    font-family: 'Playfair Display', serif; /* Use your elegant heading font */
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Styling for the paragraphs within these sections */
+.history-section p,
+.vision-section p,
+.philosophy-section p {
+    font-family: 'Inter', sans-serif; /* Use your body font */
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* ===================================== */
+/* Rooms Grid Section                    */
+/* ===================================== */
+.rooms-grid-container {
+    max-width: 1200px; /* Max width of the entire section */
+    margin: 60px auto; /* Centered with vertical spacing */
+    padding: 20px; /* Padding around the whole container */
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.rooms-grid-container h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #333;
+    margin-bottom: 40px; /* More space before the grid starts */
+}
+
+.rooms-grid {
+    display: grid; /* Use CSS Grid for the layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between grid items */
+    justify-content: center; /* Center items if they don't fill the entire row */
+    align-items: stretch; /* Ensures all cards stretch to the same height */
+}
+
+.room-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image corners are rounded */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft shadow for each card */
+    text-align: center;
+    padding-bottom: 20px; /* Padding at the bottom of the card */
+    display: flex; /* Make card a flex container for its content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push CTA to bottom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover */
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+.room-card .room-image {
+    width: 100%;
+    height: 220px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Image covers the space, cropping if necessary */
+    margin-bottom: 15px; /* Space below image */
+}
+
+.room-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    color: #555;
+    margin-bottom: 10px;
+    padding: 0 15px; /* Add horizontal padding for text */
+}
+
+.room-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Space before the button */
+    flex-grow: 1; /* Allows paragraph to take available space */
+    padding: 0 15px; /* Add horizontal padding for text */
+}
+
+.room-card .view-room-details {
+    display: inline-block;
+    background-color: #A08040; /* Muted Gold */
+    color: #F8F8F8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Pushes button to the bottom of the flex card */
+}
+
+.room-card .view-room-details:hover {
+    background-color: #C0A060; /* Lighter gold on hover */
+}
+
+/* ===================================== */
+/* Our Cuisine Section                   */
+/* ===================================== */
+.cuisine-section {
+    max-width: 1200px; /* Max width for the entire section */
+    margin: 60px auto; /* Centered with vertical spacing */
+    padding: 40px 20px; /* Padding inside the section */
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    text-align: center; /* Center the heading and paragraph */
+}
+
+.cuisine-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #333;
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.cuisine-images-wrapper {
+    display: flex; /* Makes the images line up horizontally */
+    justify-content: center; /* Centers the images if they don't fill the full width */
+    align-items: flex-start; /* Aligns them to the top if heights vary (less common for images) */
+    gap: 20px; /* Space between the images */
+    margin-bottom: 30px; /* Space between the images and the paragraph */
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+}
+
+.cuisine-image-item {
+    flex: 1; /* Allows each image container to grow and shrink */
+    min-width: 280px; /* Minimum width before wrapping */
+    max-width: 350px; /* Max width for each image item */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image corners are rounded */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for each image card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.cuisine-image-item:hover {
+    transform: translateY(-5px); /* Lifts the image card slightly on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+.cuisine-image-item img {
+    width: 100%; /* Image fills its container */
+    height: 250px; /* Fixed height for consistent image size, adjust as needed */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    display: block; /* Removes any extra space below the image */
+}
+
+.cuisine-section p {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* ===================================== */
+/* Facilities Section (Overall Container)*/
+/* ===================================== */
+.facilities-section-container {
+    max-width: 1200px; /* Max width for the whole section */
+    margin: 60px auto; /* Centered with vertical spacing */
+    padding: 40px 20px; /* Padding inside the section */
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    text-align: center; /* Centers the heading */
+}
+
+.facilities-section-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #333;
+    margin-bottom: 40px; /* Space below the heading */
+}
+
+/* ===================================== */
+/* Facilities Grid Layout                */
+/* ===================================== */
+.facilities-grid {
+    display: grid; /* Use CSS Grid for the layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Space between grid items */
+    justify-content: center; /* Center items if they don't fill the entire row */
+    align-items: stretch; /* Ensures all cards stretch to the same height */
+}
+
+.facility-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Pushes content like paragraphs and buttons */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+.facility-card .facility-image {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Image covers the space, cropping if necessary */
+    margin-bottom: 15px;
+}
+
+.facility-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    color: #555;
+    margin-bottom: 10px;
+    padding: 0 15px;
+}
+
+.facility-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1; /* Allows paragraph to take available space */
+    padding: 0 15px;
+    margin-bottom: 20px; /* Space before the button/bottom of card */
+}
+
+/* ===================================== */
+/* See More Button Styling               */
+/* ===================================== */
+.see-more-wrapper {
+    grid-column: 1 / -1; /* Makes this div span across all grid columns */
+    text-align: center; /* Centers the button horizontally */
+    margin-top: 30px; /* Space above the button */
+}
+
+.see-more-btn {
+    display: inline-block;
+    background-color: #A08040; /* Muted Gold/Bronze - match your classy button style */
+    color: #F8F8F8; /* Off-white/light-grey */
+    border: 1px solid #C0A060;
+    border-radius: 4px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif; /* Elegant heading font */
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: #C0A060; /* Lighter gold/bronze on hover */
+    color: #FFF; /* Pure white on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    border-color: #F0D090;
+}
+
+.see-more-btn:active {
+    background-color: #806030;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+/* ===================================== */
+/* Explore Port Harcourt Section         */
+/* ===================================== */
+.explore-city-section-container {
+    max-width: 1200px; /* Max width for the whole section */
+    margin: 60px auto; /* Centered with vertical spacing */
+    padding: 40px 20px; /* Padding inside the section */
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    text-align: center; /* Centers the heading and main paragraph */
+}
+
+.explore-city-section-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #333;
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.explore-description {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Space below description */
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.explore-grid {
+    display: grid; /* Use CSS Grid for a robust responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Space between grid items */
+    justify-content: center; /* Centers grid items if they don't fill the row */
+}
+
+.explore-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure image borders are rounded */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    text-align: center;
+    padding-bottom: 20px; /* Space below the caption */
+    display: flex; /* Make it a flex container for its own content */
+    flex-direction: column; /* Stack content vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.explore-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+.explore-item .explore-image {
+    width: 100%;
+    height: 200px; /* Consistent height for images */
+    object-fit: cover; /* Crops image to fit without distortion */
+    display: block; /* Remove extra space below image */
+    margin-bottom: 15px; /* Space between image and caption */
+}
+
+.explore-item h3 { /* Styling for the caption text */
+    font-family: 'Playfair Display', serif; /* Use your elegant font for captions */
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: #444;
+    margin-bottom: 0; /* No margin below the caption */
+    padding: 0 15px; /* Add horizontal padding for text */
+}
+
+/* ===================================== */
+/* Testimonials Section                  */
+/* ===================================== */
+.testimonials-section {
+    max-width: 1200px; /* Max width for the entire section */
+    margin: 60px auto; /* Centered with vertical spacing */
+    padding: 40px 20px; /* Padding inside the section */
+    background-color: #F8F8F8; /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    text-align: center; /* Center the heading */
+}
+
+.testimonials-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #333;
+    margin-bottom: 40px; /* Space below the heading */
+}
+
+.testimonials-grid {
+    display: grid; /* Use CSS Grid for the layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Space between testimonial cards */
+    justify-content: center; /* Center cards if they don't fill the entire row */
+    align-items: stretch; /* Ensures all cards stretch to the same height */
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft shadow for each card */
+    padding: 30px; /* Generous padding inside the card */
+    text-align: left; /* Align text within the card to the left */
+    display: flex; /* Make it a flex container for its own content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push name to the bottom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px; /* Space between quote and name */
+    font-style: italic; /* Italicize the quote for emphasis */
+    flex-grow: 1; /* Allows the paragraph to take available space */
+}
+
+.testimonial-card h4 {
+    font-family: 'Playfair Display', serif; /* Use your elegant font for names */
+    font-size: 1.1rem;
+    color: #A08040; /* Muted gold for the name */
+    text-align: right; /* Align the name to the right */
+    margin-top: auto; /* Pushes the name to the bottom of the card */
+}
+
+/* ===================================== */
+/* Newsletter Signup Section             */
+/* ===================================== */
+.newsletter-section-container {
+    max-width: 900px; /* Limits the width of the newsletter content */
+    margin: 80px auto; /* Centers the section with ample vertical spacing */
+    padding: 50px 30px; /* Internal padding */
+    background-color: #F0F0F0; /* A soft, subtle background */
+    border-radius: 10px; /* Slightly more rounded for a friendly look */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Gentle shadow */
+    text-align: center; /* Centers text and form elements */
+}
+
+.newsletter-section-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.newsletter-section-container p {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px; /* Constrain paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-form {
+    display: flex; /* Arranges input and button horizontally */
+    justify-content: center; /* Centers the form elements */
+    gap: 15px; /* Space between input and button */
+    flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1; /* Allows input to take up available space */
+    max-width: 350px; /* Maximum width for the input field */
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    outline: none; /* Removes outline on focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: #A08040; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(160, 128, 64, 0.3); /* Subtle shadow on focus */
+}
+
+.subscribe-btn {
+    display: inline-block;
+    background-color: #A08040; /* Muted Gold/Bronze */
+    color: #F8F8F8; /* Off-white/light-grey */
+    border: 1px solid #C0A060;
+    border-radius: 4px;
+    padding: 12px 25px; /* Slightly adjusted padding to match input height */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.subscribe-btn:hover {
+    background-color: #C0A060;
+    color: #FFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    border-color: #F0D090;
+}
+
+.subscribe-btn:active {
+    background-color: #806030;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+/* ===================================== */
+/* Footer Section                        */
+/* ===================================== */
+.main-footer {
+    background-color: black; /* Dark background for a luxury feel */
+    color: #AAA; /* Light grey text for good contrast */
+    padding: 60px 20px 30px; /* Generous padding top/bottom */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Adjust footer content wrapper to match new HTML (footer-container) */
+.footer-container { /* Updated selector from .footer-content-wrapper */
+    max-width: 1200px; /* Limits footer content width */
+    margin: 0 auto; /* Centers footer content */
+    display: grid; /* Uses CSS Grid for column layout */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between footer columns */
+    margin-bottom: 40px; /* Space above the bottom copyright line */
+    text-align: left; /* Default text alignment for columns */
+}
+
+/* Styling for footer sections based on new HTML classes */
+/* General styling for text inside footer sections */
+.footer-logo-image { /* For the logo in the footer */
+    max-width: 120px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centers the logo horizontally, maintains 20px bottom margin */
+    /* If you also want it rounded, add: */
+    border-radius: 50%;
+    object-fit: cover; /* Useful if your image isn't square for rounding */
+    aspect-ratio: 1 / 1; /* Ensures a square shape for perfect circle if rounding */
+}
+
+/* Updated selectors based on the new footer HTML structure */
+.footer-contact h3,
+.footer-links h3,
+.footer-social h3,
+.footer-logo h3 { /* Assuming you might add a heading for the logo section too */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #FFF; /* White heading color */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer-contact p,
+.footer-links li,
+.footer-social p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 8px; /* Space between paragraphs/list items */
+}
+
+.footer-contact p:last-child,
+.footer-links li:last-child,
+.footer-social p:last-child {
+    margin-bottom: 0; /* Remove bottom margin from last item */
+}
+
+.footer-contact a,
+.footer-links a,
+.footer-social a {
+    color: #AAA; /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover,
+.footer-links a:hover,
+.footer-social a:hover {
+    color: #A08040; /* Muted gold on hover */
+}
+
+.footer-links ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+/* Social Icons Styling - reusing material-symbols-outlined for consistency */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    margin-top: 15px;
+    justify-content: flex-start; /* Align social icons to the left in columns */
+}
+
+.social-icons a {
+    display: flex; /* Make icon clickable area flexible */
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Fixed width/height for circular icons */
+    height: 40px;
+    background-color: #333; /* Darker background for icons */
+    border-radius: 50%; /* Make them circular */
+    color: #FFF; /* White icon color */
+    font-size: 1.3rem; /* Icon size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #A08040; /* Muted gold on hover */
+    color: #FFF; /* Keep icon white on hover */
+}
+
+.social-icons .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Footer Bottom (Copyright) - NEW HTML structure */
+.footer-bottom { /* Using the class from your HTML now */
+    border-top: 1px solid #444; /* Separator line */
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.footer-bottom p {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===================================== */
+/* Responsive Footer Adjustments         */
+/* ===================================== */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+        text-align: center; /* Center content when stacked */
+        gap: 40px; /* More space between stacked sections */
+    }
+
+    .footer-logo-image {
+        margin: 0 auto 20px auto; /* Re-center logo for stacked layout */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons when stacked */
+    }
+
+    .footer-contact h3,
+    .footer-links h3,
+    .footer-social h3,
+    .footer-logo h3 {
+        text-align: center; /* Ensure headings are centered */
+    }
+
+    .footer-contact p,
+    .footer-links ul, /* Target the ul for list alignment */
+    .footer-social p {
+        text-align: center; /* Center text content in stacked columns */
+    }
+
+    /* Adjust padding for overall footer on small screens if desired */
+    .main-footer {
+        padding: 40px 15px 20px;
+    }
+}
+
+
+/* ===================================== */
+/* Contact Section (New section)         */
+/* ===================================== */
+.contact-section {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 50px 30px;
+    background-color: #FFF; /* Clean white background */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Reusing .contact-link button style for consistency */
+.contact-section .contact-link { /* More specific selector to ensure it applies */
+    background-color: #A08040; /* Muted Gold/Bronze */
+    color: #F8F8F8; /* Off-white/light-grey */
+    border: 1px solid #C0A060;
+    border-radius: 4px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-section .contact-link:hover {
+    background-color: #C0A060;
+    color: #FFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    border-color: #F0D090;
+}
+
+.contact-section .contact-link:active {
+    background-color: #806030;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+
+/* ===================================== */
+/* Responsive Adjustments                */
+/* ===================================== */
+@media (max-width: 768px) {
+    /* Navigation */
+    .navbar-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align everything to the left when stacked */
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .main-nav-area {
+        width: 100%; /* Take full width when stacked */
+        justify-content: flex-start; /* Align main nav links to the left when stacked */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack individual nav links vertically */
+        align-items: flex-start; /* Align individual nav links to the left */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-links li a {
+        padding: 5px 0;
+    }
+
+    .contact-area {
+        width: 100%;
+        text-align: left;
+    }
+
+    .contact-link {
+        width: 100%;
+        text-align: center; /* Center the text within the full-width button */
+    }
+
+    /* About Section */
+    .about-section {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        align-items: center; /* Center them when stacked */
+        padding: 40px 15px;
+    }
+
+    .history-section,
+    .vision-section,
+    .philosophy-section {
+        width: 100%; /* Take full width when stacked */
+        margin-bottom: 20px; /* Add space between stacked sections */
+        max-width: 400px;
+    }
+
+    .about-section .philosophy-section {
+        margin-bottom: 0;
+    }
+
+    /* Rooms Grid */
+    .rooms-grid-container {
+        padding: 20px 15px;
+    }
+
+    .rooms-grid {
+        grid-template-columns: 1fr; /* Force 1 column on smaller screens */
+    }
+
+    .room-card {
+        padding-bottom: 15px;
+    }
+
+    /* Cuisine Section */
+    .cuisine-images-wrapper {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center them when stacked */
+        gap: 20px;
+    }
+
+    .cuisine-image-item {
+        max-width: 90%;
+        min-width: 250px;
+    }
+
+    /* Facilities Grid */
+    .facilities-section-container {
+        padding: 20px 15px;
+    }
+
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facility-card {
+        padding-bottom: 15px;
+    }
+
+    /* Explore City Section */
+    .explore-city-section-container {
+        padding: 20px 15px;
+    }
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .explore-item {
+        margin-bottom: 20px;
+    }
+
+    .explore-grid > .explore-item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        padding: 30px 15px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+
+    .testimonials-grid > .testimonial-card:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Newsletter Section */
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input[type="email"],
+    .subscribe-btn {
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+
+    /* Footer Section */
+    .footer-container { /* Adjust columns for tablets, matches .footer-content-wrapper */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        text-align: center; /* Center content in columns */
+    }
+
+   
+ 
+
+    .footer-contact,
+
+    .footer-logo-image {
+    display: block; /* Ensure it's a block-level element for margin auto to work reliably */
+    margin: 0 auto; /* Centers the block element horizontally within its container */
+    
+    /* --- Properties for perfect circular shape --- */
+    width: 100px; /* Set a fixed width for the image */
+    height: 100px; /* Set an equal fixed height for a perfect square */
+    /* You can also use max-width and aspect-ratio for responsiveness:
+       max-width: 100px;
+       aspect-ratio: 1 / 1;
+    */
+
+    border-radius: 50%; /* This is what makes the square image a perfect circle */
+    object-fit: cover; /* Ensures the image fills the circular area without distortion, cropping if necessary */
+    
+    /* Original styles you had, combined/clarified */
+    /* Removed max-width: 100px; if using fixed width/height. If using max-width + aspect-ratio, keep max-width. */
+    /* Removed margin-left/right: auto as 'margin: 0 auto;' covers it */
+}
+
+/* Ensure the container also allows for centering */
+.footer-logo {
+    text-align: center; /* Still useful if you have other inline content or want this wrapper to center its children */
+    /* Consider removing max-width and border-radius from here if you are applying them directly to the image */
+    max-width: 80px; 
+    border-radius: 50%; 
+}
+
+    .footer-section h3 {
+        margin-top: 20px;
+    }
+
+    .footer-links ul {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Footer Section */
+    .footer-container {
+        grid-template-columns: 1fr; /* Stack all columns into a single column on mobile */
+        text-align: center; /* Center all text */
+    }
+
+    .footer-section h3 {
+        margin-top: 20px;
+    }
+
+    .footer-section p,
+    .footer-section li,
+    .social-icons {
+        margin-left: auto;
+        margin-right: auto; /* Ensure elements remain centered */
+    }
+}
+
+.special-offers-grid {
+    display: flex; /* Establishes a flex container */
+    justify-content: space-around; /* Distributes items evenly with space around them */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if space is limited */
+    gap: 20px; /* Adds space between the offer cards */
+}
+
+.offer-card {
+    flex: 1; /* Allows the cards to grow and shrink, taking up equal space */
+    min-width: 280px; /* Ensures cards don't get too small on smaller screens */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    /* Add any other styling for your offer cards here, like padding, borders, shadows, etc. */
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.offer-image {
+    max-width: 100%; /* Ensures images fit within their containers */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below the image */
+    margin-bottom: 10px;
+}
+
+.offer-card h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.offer-card p {
+    margin-bottom: 15px;
+}
+
+.view-offer-details {
+    display: inline-block;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.view-offer-details:hover {
+    background-color: #0056b3; /* Example hover color */
+}
+
+.view-all-offers-wrapper {
+    text-align: center; /* Centers inline content like the anchor tag */
+    margin-top: 20px; /* Adds some space above the button, adjust as needed */
+    margin-bottom: 20px; /* Adds some space below the button, adjust as needed */
+}
+
+.view-all-offers-btn {
+    display: inline-block; /* Essential for text-align to work on it, and allows padding */
+    padding: 10px 20px; /* Adds some padding around the text */
+    background-color: #007bff; /* Example background color */
+    color: white; /* Example text color */
+    text-decoration: none; /* Removes the underline from the link */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.view-all-offers-btn:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+/* ===================================== */
+/* Booking Section                   */
+/* ===================================== */
+
+/* --- Global Body Styles --- 
+/* This will ensure no default margins or padding push content around,
+   and will provide a general background. 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;  Light grey background for the page 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; Ensures padding/border are included in element's total width/height 
+}
+
+/* --- Section and Div Wrappers (Optional but accounted for) --- 
+/* If these wrappers don't need specific styles, you can leave them minimal 
+div { This might be too broad if you have other unclassed divs 
+    Add specific classes to your outermost divs if they are causing issues 
+}
+
+section {
+     If you intend for this section to have specific layout properties, define them here.
+       Otherwise, it acts as a simple container. 
+}
+
+*/
+/* --- Form Container Positioning (Main Booking Page Content) --- */
+/* This targets the main white box that contains your form.
+   It will appear directly under the nav bar with a margin. */
+
+.contact-header-container{
+    width: 100%; /* Full width of the container */  
+    background-color: #A08040; /* Muted Gold/Bronze - matches your classy button style */
+    color: #F8F8F8; /* Off-white/light-grey */
+    padding: 20px 0; /* Top/bottom padding for the header */
+    text-align: center; /* Centers the header text */
+}
+
+.contact-header{
+    width:90%; /* Ensures the header takes up 90% of the container width */
+    max-width: 1200px; /* Limits the width of the header */
+    font-family: 'Playfair Display', serif; /* Elegant heading font */
+    font-size: 2.5rem; /* Larger header text */
+    margin: 0; /* Removes default margin */
+    text-transform: uppercase; /* If you want uppercase text */
+    letter-spacing: 0.05em; /* Slightly spaced letters for elegance */
+    border-bottom: black 1px solid; /* Black bottom border for emphasis */
+}
+
+.toll-free-button {
+    display: inline-block; /* Essential for padding/margin to work correctly on inline elements like <a> */
+    padding: 15px 30px; /* Top/bottom padding 15px, left/right padding 30px to make it rectangular */
+    border: 1px solid #ffffff; /* 1px solid white border */
+    background-color: transparent; /* Transparent background */
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline if it's a link */
+    font-family: Arial, sans-serif; /* Or your preferred font */
+    font-size: 16px; /* Adjust as needed */
+    text-transform: uppercase; /* If you want uppercase text */
+    cursor: pointer; /* To indicate it's clickable */
+    /* Remove any border-radius if it's present and you want sharp corners */
+    border-radius: 0; /* Ensures sharp corners */
+}
+
+
+..form-container {
+    background-color: #ffffff; /* White background for the form itself */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
+    width: 100%;
+    max-width: 800px; /* Maximum width of the form box */
+    overflow: hidden; /* Important for header image, ensures content respects border-radius */
+    margin: 40px auto; /* 40px top margin (space from nav), auto for horizontal centering */
+    box-sizing: border-box; /* Crucial for consistent sizing with padding/border */
+    padding: 0; /* Remove any default padding that might affect internal layout */
+}
+
+/* --- Form Header Styling (Specific to this Booking Page's Form) --- */
+/* This targets the header INSIDE your form-container */
+.form-header {
+    background: url("./Images/pic\ 9.jpg") no-repeat center center; /* IMPORTANT: Replace with your actual header image path */
+    background-size: cover; /* Cover the entire area */
+    color: #ffffff; /* White text on the image */
+    padding: 60px 20px; /* Adjust padding for height */
+    text-align: center; /* Corrected typo: removed 's' */
+    position: relative; /* For potential overlay */
+    display: flex; /* Use flex for content inside header */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    box-sizing: border-box; /* Ensure padding is included in the element's total size */
+}
+
+.form-header::before { /* Optional: Dark overlay for better text readability on light images */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 1; /* Place it above the image but below the text */
+}
+
+.form-header h1,
+.form-header p {
+    margin: 0;
+    position: relative; /* Ensure text is above the overlay */
+    z-index: 2;
+}
+
+.form-header h1 {
+    font-size: 2.5em; /* Larger header text */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Stronger text shadow */
+}
+
+.form-header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* --- Main Form Content Styling --- */
+/* This targets the <form> element itself, which is inside .form-container */
+.booking-form {
+    padding: 25px; /* Internal padding for the form content area */
+}
+
+.booking-form h2 { /* Styling for the new section headers */
+    font-size: 1.6em; /* Slightly larger */
+    color: #0056b3; /* Darker blue, more official */
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0; /* More prominent separator */
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Flex containers for side-by-side inputs */
+.input-group-row,
+.input-group-row-triple {
+    display: flex; /* Arrange children (form-group) in a row */
+    gap: 20px; /* Space between input groups */
+    margin-bottom: 15px; /* Space between rows */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.form-group {
+    flex: 1; /* Make each form-group take equal space within its row */
+    min-width: 250px; /* Minimum width before wrapping */
+    margin-bottom: 0; /* Reset margin as gap handles spacing between inputs */
+}
+
+/* Specific adjustment for the triple row */
+.input-group-row-triple .form-group {
+    flex: 1 1 calc(33.333% - 14px); /* Approximately 3 items per row with gaps (20px gap / 3 items = ~6.67px per side = 14px total removed) */
+    min-width: 150px; /* Allow them to be smaller */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea { /* Combined input selectors */
+    width: 100%; /* Take full width of its parent .form-group */
+    padding: 12px 15px; /* Increased padding */
+    border: 1px solid #c2c2c2; /* Slightly darker border */
+    border-radius: 5px; /* Slightly more rounded */
+    font-size: 1em;
+    color: #444;
+    box-sizing: border-box; /* Crucial for consistent width with padding/border */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff; /* Primary blue on focus */
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2); /* Enhanced shadow on focus */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999; /* Lighter placeholder text */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px; /* Minimum height for textarea */
+}
+
+/* Estimated Total Display */
+.form-total {
+    background-color: #e9f5ff; /* Light blue background */
+    border: 1px solid #a7d9ff;
+    border-radius: 8px; /* More rounded */
+    padding: 18px 25px; /* More padding */
+    margin-top: 30px; /* More space above */
+    text-align: center;
+    font-size: 1.2em; /* Larger text */
+    font-weight: bold;
+    color: #0056b3; /* Darker blue */
+    display: flex; /* Use flexbox to align content within the total box */
+    justify-content: center;
+    align-items: center;
+}
+
+.form-total .price-display {
+    font-size: 1.6em; /* Even larger price */
+    color: #28a745; /* Prominent green for price */
+    font-weight: bolder;
+    margin-left: 10px; /* Space between "Estimated Total:" and the price */
+}
+
+/* Buttons Styling */
+.form-actions {
+    margin-top: 30px; /* More space above buttons */
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: center; /* Center the buttons */
+    gap: 15px; /* Space between buttons */
+}
+
+.btn {
+    padding: 14px 30px; /* Larger padding for bigger buttons */
+    border: none;
+    border-radius: 6px; /* Slightly more rounded buttons */
+    cursor: pointer;
+    font-size: 1.05em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+}
+
+.primary-btn {
+    background-color: #007bff; /* Blue for primary action */
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* More noticeable lift effect */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Enhanced shadow on hover */
+}
+
+.secondary-btn {
+    background-color: #6c757d; /* Grey for secondary action */
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(108, 117, 125, 0.3);
+}
+
+/* --- Responsive Adjustments for Small Screens --- */
+
+    
+/* HAMBURGER MENU */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+
+    .main-nav-area {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .main-nav-area.show {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .contact-area {
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+
+    /* Form Container (Booking Page Specific) Adjustments */
+    .form-container {
+        border-radius: 0;
+        box-shadow: none;
+        margin: 20px 0; /* Less top/bottom margin on smaller screens, no auto-centering needed as it takes full width */
+        padding: 15px; /* Less padding inside form on mobile */
+    }
+
+    .form-header {
+        padding: 40px 15px; /* Adjust header padding for smaller screens */
+    }
+
+    .form-header h1 {
+        font-size: 1.8em; /* Smaller header font */
+    }
+
+    .form-header p {
+        font-size: 0.9em; /* Smaller subtitle font */
+    }
+
+    .input-group-row,
+    .input-group-row-triple {
+        flex-direction: column; /* Stack inputs vertically */
+        gap: 0;
+    }
+
+    .form-group {
+        flex: none;
+        width: 100%;
+        margin-bottom: 15px;
+        min-width: unset;
+    }
+
+    .form-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full width */
+    }
+}
+/* Add these styles to your CSS */
+
+.form-group {
+    margin-bottom: 20px; /* Space between each form field group */
+}
+
+.form-group label {
+    display: block; /* Make labels take up full width, placing input on next line */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold; /* Make labels stand out */
+    color: #333; /* Darker color for labels */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Make inputs, selects, and textareas take full width of their container */
+    padding: 12px; /* Internal padding for input fields */
+    border: 1px solid #ddd; /* Light gray border for inputs */
+    border-radius: 4px; /* Slightly rounded input corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-family: Arial, sans-serif; /* Consistent font for inputs */
+    font-size: 16px; /* Readable font size */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing of textarea, but not horizontal */
+}
+
+.form-group input[type="submit"] {
+    background-color: #A08040; /* Muted gold background for the submit button */
+    color: white; /* White text for the submit button */
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #8C7037; /* Slightly darker gold on hover */
+}
+
+.form-width{
+    width: 100%; /* Ensures the form takes full width of its container */
+    max-width: 800px; /* Optional: limits the maximum width for larger screens */
+    margin: 0 auto; /* Centers the form horizontally */
+    padding: 20px; /* Adds padding around the form content */
+    box-sizing: border-box; /* Ensures padding is included in total width/height */
+}
+
+.gallery-img{
+    display:flex;
+    padding: 10px 5px ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right:10px;
+    background-color:#e6c200;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(17, 49, 78, 0.3);
+    transition: border-color 0.3s ease;
+    transform: translateY(-2px);
+    text-align: center;
+
+}
+
+.restaurant-display{
+    display:flexbox;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: rgba(120,120,120,1);
+    color:whitesmoke;
+    text-align: center;
+    
+    
+}
+
+.res-img{
+    border-radius: 8px;
+    image-orientation:inherit;
+}
