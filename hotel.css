@@ -1698,7 +1698,20 @@ section {
     
 }
 
-.res-img{
+.res-img {
+    width: 100%;           /* Makes image scale to container width */
+    height: auto;          /* Maintains aspect ratio */
     border-radius: 8px;
-    image-orientation:inherit;
+    display: block;        /* Removes bottom whitespace */
+    image-orientation: inherit;
+}
+
+.feature {
+    max-width: 100%;
+    padding: 10px;
+}
+
+.feature {
+    max-width: 100%;
+    padding: 10px;
 }
